@@ -71,6 +71,8 @@ for j in range(num):
     Qsc[j] = Qsc[j]*(2*np.pi/(k[j])**2)
     Qsc2[j] = Qsc[j]/G
 
-plt.plot(wavelength,Qsc2)
-plt.xticks(np.arange(300e-9,1000e-9,100e-9))
+plt.plot(wavelength*1e9,Qsc2)
+plt.xticks(np.arange(300,1100,100))
+plt.xlabel('wavelength (in nm)')
+plt.ylabel('Scattering efficiency')
 plt.grid(True)
